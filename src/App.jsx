@@ -1,18 +1,19 @@
 import Badge from './components/Badge'
+import BadgeList from './components/BadgeList'
 import Banner from './components/Banner'
 import Card from './components/Card'
 import Testimonial from './components/Testimonial'
-import './App.css'
 
-function App() {
+export default function App() {
+
     return (
     <>
-      <Banner />
-      <Badge />
-      <Card />
-      <Testimonial />
+      <BadgeList />
+      <Banner setStatus="neutral">Some additional info here</Banner>
+      <Card>Card</Card>
+      <Testimonial>Testimonial</Testimonial>
     </>
   )
 }
 
-export default App
+

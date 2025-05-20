@@ -1,5 +1,5 @@
-export default function Card() {
+export default function Card({children}) {
     return (
-        <h2>This is a Card component</h2>
+        <h2>{children}</h2>
     )
 }

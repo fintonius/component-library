@@ -1,5 +1,5 @@
-export default function Badge() {
+export default function Badge({children, shape, color}) {
     return (
-        <h2>This is a Badge component</h2>
+        <span className={`badge ${shape} ${color}`}>{children}</span>
     )
 }

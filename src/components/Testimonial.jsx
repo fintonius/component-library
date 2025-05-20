@@ -1,5 +1,5 @@
-export default function Testimonial() {
+export default function Testimonial({children}) {
     return (
-        <h2> This is a Testimonial component</h2>
+        <h2>{children}</h2>
     )
 }
