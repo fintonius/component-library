@@ -7,21 +7,25 @@
 // how do I make this as "automated" as possible - as in how much info 
 // does the user/dev have to include when using the Component to get 
 // the desired effect?
+import { FaExclamation } from "react-icons/fa";
+export default function Banner({children, setStatus, setGreeting}) {
 
-export default function Banner({children, setStatus}) {
     const statusList = [
-        {status: 'success', message: 'Congratulations!', color: 'green'},
-        {status: 'warning', message: 'Attention', color: 'yellow'},
-        {status: 'error', message: 'There is a problem with your application', color: 'red'},
-        {status: 'neutral', message: 'Update available', color: 'blue'}
+        {status: 'success', color: 'green', icon: '✓'},
+        {status: 'warning', color: 'yellow', icon: '!'},
+        {status: 'error', color: 'red', icon: 'x'},
+        {status: 'neutral', color: 'blue', icon: 'i'}
     ]
 
     const status = statusList.find(status => status.status === setStatus)
 
     return (
         <div className={`banner ${status.color}`}>
-            <h2>{status.message}</h2>              
-            {children && <p>{children}</p>} {/* optional text input for user */}
+            <span className={`icon ${status.status}`}>{`${status.icon}`}</span>
+            <div className="content">
+                <h2>{setGreeting}</h2>
+                {children && <p>{children}</p>} {/* optional text input for user */}
+            </div>
         </div>
     )
 }

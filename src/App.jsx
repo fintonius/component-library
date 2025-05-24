@@ -9,7 +9,16 @@ export default function App() {
     return (
     <>
       <BadgeList />
-      <Banner setStatus="neutral">Some additional info here</Banner>
+      <Banner 
+        setStatus="success" 
+        setGreeting='Congrats'>
+          Some additional info here
+      </Banner>
+      <Banner 
+        setStatus="warning" 
+        setGreeting='Attention'>
+          Some additional info here
+      </Banner>
       <Card>Card</Card>
       <Testimonial>Testimonial</Testimonial>
     </>
