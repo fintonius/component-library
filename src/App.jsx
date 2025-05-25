@@ -11,13 +11,27 @@ export default function App() {
       <BadgeList />
       <Banner 
         setStatus="success" 
-        setGreeting='Congrats'>
+        setMessage='Congrats'>
           Some additional info here
       </Banner>
       <Banner 
         setStatus="warning" 
-        setGreeting='Attention'>
+        setMessage='Attention'>
           Some additional info here
+      </Banner>
+      <Banner 
+        setStatus="neutral" 
+        setMessage=''>
+          Some additional info here
+      </Banner>
+      <Banner 
+        setStatus="error" 
+        setMessage={`You don't belong here`}>
+          Some additional info here
+      </Banner>
+      <Banner 
+        setStatus="success" 
+        setMessage='Congrats'>
       </Banner>
       <Card>Card</Card>
       <Testimonial>Testimonial</Testimonial>

@@ -8,7 +8,7 @@
 // does the user/dev have to include when using the Component to get 
 // the desired effect?
 import { FaExclamation } from "react-icons/fa";
-export default function Banner({children, setStatus, setGreeting}) {
+export default function Banner({children, setStatus, setMessage}) {
 
     const statusList = [
         {status: 'success', color: 'green', icon: '✓'},
@@ -23,7 +23,7 @@ export default function Banner({children, setStatus, setGreeting}) {
         <div className={`banner ${status.color}`}>
             <span className={`icon ${status.status}`}>{`${status.icon}`}</span>
             <div className="content">
-                <h2>{setGreeting}</h2>
+                <h2>{setMessage}</h2>
                 {children && <p>{children}</p>} {/* optional text input for user */}
             </div>
         </div>
